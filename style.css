@@ -5,11 +5,19 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+body
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque;
+    overflow-x: hidden !important;
+}
 .banner
 {
     width: 100%;
     height: 90vh;
-    background-color: gray; 
+    background-color: bisque;
     background-size: cover;
     background-repeat: no-repeat;
     flex-direction: column;
@@ -22,7 +30,7 @@
     padding: 0px 15%;
     display: inline-flex;
     justify-content: space-between;
-   
+
 }
 .logo
 {
@@ -35,7 +43,7 @@
     justify-content: center;
     align-items: center;
     color: white;
-    
+
 }
 .nav
 {
@@ -50,7 +58,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-   color: white;  
+   color: white;
 }
 .nav-link
 {
@@ -75,6 +83,7 @@
     row-gap: 50px;
     margin-top: 100px;
     color: #7f58a3;
+
 }
 .badge
 {
@@ -108,38 +117,47 @@
     cursor: pointer;
     border-radius: 20px;
 }
+
 .booking
 {
-    width: 100%;
-    padding: 20px 10px;
+    width: 80%;
+    margin: auto;
+    height: 35vh;
     background-color: bisque;
     display: inline-flex;
-    column-gap: 20px;
-    justify-content: space-around;
-}    
-.inp
-{
-   display: flex;
-   flex-direction: column;
-   justify-items: center;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
+    padding: 2%;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    top: 5vh;
+    .inp
+    {
+        .book-btn
+        {
+            width: max-content;
+        }
+    }
 }
+
 input
 {
-    height: 40px;
-    text-indent: 5px;
-    font: 16px;
     box-shadow: none;
-    border-radius: 10px;
-    border-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 30px;
+    padding: 10px 20px;
+    outline: 0;
+    margin-top: 10px;
 }
+
 .book-btn
 {
     padding: 10px 30px;
     margin-top: 25px;
-    border-radius: 10px;   
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: transparent;
+    display: inline-flex;
+    justify-content: space-between;
+
 }
 .book-btn:hover
 {
@@ -149,82 +167,115 @@ input
 }
 .about
 {
-    width: 100%;
-    height: 30vh;
+    margin-top: 10%;
+    width: 100vw;
+    height: 50vh;
     padding: 50px 15%;
     background-color: bisque;
-   
+
+    h4
+    {
+        font-size: 3rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+
+        margin-bottom: 5%;
+    }
+
+    p
+    {
+        line-height: 25px;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        font-weight: lighter;
+
+    }
 }
-.about-us
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 50px;
-    background-color: bisque;
-}
-.us
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+
+
 .destinations
 {
     width: 100%;
-    padding: 50px 15%;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+    box-sizing: border-box;
+    padding: 0 15%;
     background-color: bisque;
+    margin-bottom: 10%;
+
+    h1
+    {
+        font-size: 3rem;
+        letter-spacing: 1px;
+        font-weight: 500;
+
+        margin-bottom: 5%;
+    }
+
+    p
+    {
+        line-height: 25px;
+        letter-spacing: 1px;
+        word-spacing: 10px;
+        font-weight: lighter;
+
+    }
 }
 .section-title
 {
-   font-size: 30px; 
+   font-size: 30px;
+}
+.destinations .destinations-area
+{
+    margin-top: 10%;
+    width: 100%;
+    min-height: 200vh;
+    max-height: 300vh;
+    box-sizing: border-box;
+    padding: 1%;
+    display: inline-flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    .destination
+    {
+        width: 30%;
+        height: 50%;
+
+        .destination-img
+        {
+            img
+            {
+                object-fit: cover;
+                width: 100%;
+                height: 30vh;
+            }
+        }
+        .destination-details
+        {
+            margin-top: 10px;
+            min-height: 50vh;
+            height: 60vh;
+            max-height: 100vh;
+
+            *
+            {
+                margin-bottom: 10px;
+            }
+            h2
+            {
+                height: 10%;
+
+            }
+            p
+            {
+                height: 55%;
+
+            }
+        }
+    }
 }
 
-.destinations-area
-{
-    width: 100%;
-    padding: 20px 0px;
-    margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 5%;
-    row-gap: 40px;
-}
-.destination
-{
-    width: 30%;
-    background-color: bisque;
-}
-.destination-img
-{
-    height: 300px;
-    width: 100%;
-}
-.destination-image
-{
-    width: 100%;
-    margin-bottom: 10px;
-}
-.destination-details
-{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 10px;
-}
-.destination-image1
-{
-    width: 100%;
-}
+
+
 .packages
 {
     width: 100%;
@@ -232,12 +283,12 @@ input
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     background-color: red;
 }
 .packages-title
 {
-   font-size: 30px; 
+   font-size: 30px;
 }
 .packages-area
 {
